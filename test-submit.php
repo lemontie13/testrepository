@@ -34,9 +34,11 @@
 			<p> <?= $rows->rowCount()?> </p>
 		<?php
 		foreach($rows as $row) {
-			
+			print $row["device"];
+			print $row["customer_name"];
+			print $row["os"];
 		?>
-			<p><?= $row["device"] + " " + $row["customer_name"] + " " + $row["os"] + " " ?> </p>
+			
 		<?php
 
 		}
