@@ -14,23 +14,24 @@
 		$carrier = $_GET["carrier"];
 
 		$server = "tcp:mxx6aa5ssr.database.windows.net,1433";
-		$user = "<my-test-db>"@mxx6aa5ssr;
+		$user = "my-test-db"@mxx6aa5ssr;
 		$pwd = "Happyness!";
 		$db = "testdb";
 
-		/*try {
-    		$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+		try {
+    		$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", "$user", "$pwd");
     		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch(Exception $e) {
     		die(print_r($e));
-		}*/
-		try {
+		}
+		/*try {
 			$conn = new PDO ("sqlsrv:server = tcp:mxx6aa5ssr.database.windows.net,1433; Database = testdb", "my-test-db", "Happyness!");   
 			$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch ( PDOException $e ) { 
 			print( "Error connecting to SQL Server." );
 			die(print_r($e));
-		}
+		}*/
+
 
 		echo "connected\n";
 		$device = $conn->quote($device);
