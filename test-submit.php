@@ -29,7 +29,7 @@
 		$device = $conn->quote($device);
 		$carrier = $conn->quote($carrier);
 
-		$rows = $conn->query("SELECT * FROM [Devices] WHERE device = $device AND carrier = $carrier ORDER BY release_date DESC");
+		$rows = $conn->query("SELECT * FROM devices ");#WHERE device = $device AND carrier = $carrier ORDER BY release_date DESC");
 		?>
 			<p> <?= $rows->rowCount()?> </p>
 		<?php
