@@ -37,11 +37,11 @@
 		$device = $conn->quote($device);
 		$carrier = $conn->quote($carrier);
 
-		$rows = $conn->query("SELECT * FROM [Devices] WHERE Device = $device AND Carrier = $carrier ORDER BY Date DESC");
+		$rows = $conn->query("SELECT * FROM [Devices] WHERE device = $device AND carrier = $carrier ORDER BY release_date DESC");
 		foreach($rows as $row) {
-			echo "$row";
+			
 		?>
-			<p><?= $row["Device"] + " " + $row["Customer Name"] + " " + $row["OS"] + " " ?> </p>
+			<p><?= $row["device"] + " " + $row["customer_name"] + " " + $row["os"] + " " ?> </p>
 		<?php
 
 		}
