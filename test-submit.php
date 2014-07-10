@@ -18,8 +18,12 @@
 		$pwd = "Happyness!";
 		$db = "testdb";
 
+		echo "hello";
+
 		try {
+			echo "testing";
     		$conn = new PDO( "sqlsrv:server= $server ; Database = $db ", $user, $pwd);
+    		echo "more testing";
     		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch(Exception $e) {
     		die(print_r($e));
