@@ -21,7 +21,7 @@
 		echo "hello";
 
 		try {
-			echo "testing";
+			echo "testing 1";
     		$conn = new PDO( "sqlsrv:server= $server ; Database = $db ", $user, $pwd);
     		echo "more testing";
     		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
