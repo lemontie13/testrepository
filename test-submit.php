@@ -13,7 +13,7 @@
 		$device = $_GET["device"];
 		$carrier = $_GET["carrier"];
 
-		$server = "tcp:<mxx6aa5ssr.database.windows.net,1433>";
+		$server = "tcp:mxx6aa5ssr.database.windows.net,1433";
 		$user = "my-test-db"@mxx6aa5ssr;
 		$pwd = "Happyness!";
 		$db = "testdb";
