@@ -9,15 +9,11 @@
 
 <?php
 	if(isset($_GET["device"]) && isset($_GET["carrier"])) {
-		echo $_GET["device"];
-		echo $_GET["carrier"];
 
 		$device = $_GET["device"];
 		$carrier = $_GET["carrier"];
 
-		echo "$device $carrier";
-
-		/*$server = "tcp:<mxx6aa5ssr>";
+		$server = "tcp:<mxx6aa5ssr>";
 		$user = "<value of USERNAME from section above>"@SERVER_ID;
 		$pwd = "my-test-db";
 		$db = "testdb";
@@ -29,13 +25,18 @@
     		die(print_r($e));
 		}
 
+		echo "connected\n";
+		$device = $conn->quote($device);
+		$carrier = $conn->quote($carrier);
+
 		$rows = $conn->query("SELECT * FROM [Devices] WHERE Device = $device AND Carrier = $carrier ORDER BY Date DESC");
 		foreach($rows as $row) {
+			echo "$row";
 		?>
 			<p><?= $row["Device"] + " " + $row["Customer Name"] + " " + $row["OS"] + " " ?> </p>
 		<?php
 
-		}*/
+		}
 	}
 ?>
 
