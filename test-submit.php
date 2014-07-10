@@ -22,6 +22,7 @@
     		$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch(Exception $e) {
+			echo "error";
     		die(print_r($e));
 		}
 
