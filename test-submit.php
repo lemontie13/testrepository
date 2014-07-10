@@ -13,8 +13,8 @@
 		$device = $_GET["device"];
 		$carrier = $_GET["carrier"];
 
-		$server = "tcp:<mxx6aa5ssr>";
-		$user = "my-test-db";
+		$server = "tcp:mxx6aa5ssr.database.windows.net";
+		$user = "my-test-db"@mxx6aa5ssr;
 		$pwd = "Happyness!";
 		$db = "testdb";
 
@@ -22,7 +22,6 @@
     		$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch(Exception $e) {
-			echo "error";
     		die(print_r($e));
 		}
 
