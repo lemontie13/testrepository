@@ -30,13 +30,22 @@
 		$carrier = $conn->quote($carrier);
 
 		$rows = $conn->query("SELECT * FROM devices ");#WHERE device = $device AND carrier = $carrier ORDER BY release_date DESC");
-		?>
-			<p> <?= $rows->rowCount()?> </p>
-		<?php
+		
+
 		foreach($rows as $row) {
-			print $row["device"];
-			print $row["customer_name"];
-			print $row["os"];
+			$device_name = $row["device"];
+			$customer_name = $row["customer_name"];
+			$os = $row["os"];
+			$os_version = $row["os_version"];
+			$sense = $row["sense_version"];
+			$sw_version = $row["software_version"];
+			$baseband = $row["baseband"];
+			$release = $row["release_date"];
+			$carrier_name = $row["carrier"];
+		?>
+			<p><?=$carrier_name?>'s <?=$device_name?> (<?=$customer_name?>) was updated to <?= $os . " " . $os_version?>, Sense <?=$sense?>, SW version <?=$sw_version?>, baseband <?=$baseband?> on <?=$release?> 
+
+			
 		?>
 			
 		<?php
