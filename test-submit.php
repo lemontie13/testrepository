@@ -15,7 +15,7 @@
 		$device = $_GET["device"];
 		$carrier = $_GET["carrier"];
 
-		echo $device + " " + $carrier;
+		echo "$device $carrier";
 
 		/*$server = "tcp:<mxx6aa5ssr>";
 		$user = "<value of USERNAME from section above>"@SERVER_ID;
