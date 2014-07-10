@@ -13,7 +13,7 @@
 		$device = $_GET["device"];
 		$carrier = $_GET["carrier"];
 
-		$server = "tcp:mxx6aa5ssr";
+		$server = "tcp:<mxx6aa5ssr>";
 		$user = "my-test-db";
 		$pwd = "Happyness!";
 		$db = "testdb";
