@@ -14,15 +14,15 @@
 		$carrier = $_GET["carrier"];
 
 		$server = "tcp:<mxx6aa5ssr>";
-		$user = "<value of USERNAME from section above>"@SERVER_ID;
-		$pwd = "my-test-db";
+		$user = "my-test-db"@SERVER_ID;
+		$pwd = "Happyness!";
 		$db = "testdb";
 
 		try {
     		$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		} catch(Exception $e) {
-    		echo "$e";
+    		die(print_r($e));
 		}
 
 		echo "connected\n";
