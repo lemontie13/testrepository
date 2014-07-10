@@ -1,5 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		
+	</head>
+
+	<body>
+
 <?php
 	if(isset($_GET["device"]) && isset($_GET["carrier"])) {
+		echo "Things are here";
+
 		$device = $_GET["device"];
 		$carrier = $_GET["carrier"];
 
@@ -20,7 +31,10 @@
 		?>
 			<p><?= $row["Device"] + " " + $row["Customer Name"] + " " + $row["OS"] + " " ?> </p>
 		<?php
-		
+
 		}
 	}
 ?>
+
+</body>
+</html>
