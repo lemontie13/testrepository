@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Test</title>
-		
+		<meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
 	</head>
 
 	<body>
