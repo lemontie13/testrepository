@@ -21,6 +21,7 @@
 		$baseband = $_POST["baseband"];
 		$release = $_POST["release"];
 		$carrier = $_POST["carrier"];
+		$notes = $_POST["notes"];
 
 		/*$server = "tcp:mxx6aa5ssr.database.windows.net,1433";
 		$user = "my-test-db@mxx6aa5ssr";
@@ -53,7 +54,7 @@
 		?>
 			<p>The following update was added:</p>
 			<p><?=$carrier?>'s <?=$device?> (<?=$customer_name?>) was updated to <?= $os . " " . $os_version?>, Sense <?=$sense?>, SW version <?=$sw_version?>, baseband <?=$baseband?> on <?=$release?></p>
-
+			<p>Notes on this update: <?=$notes?></p>
 		<?php
 
 		}
