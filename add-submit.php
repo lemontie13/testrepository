@@ -18,7 +18,7 @@
 				&& isset($_POST["swversion"]) && isset($_POST["baseband"]) 
 				&& isset($_POST["release"]) && isset($_POST["carrier"]));
 	
-	echo $all_set;
+	echo "$all_set";
 
 	if($all_set) {
 
