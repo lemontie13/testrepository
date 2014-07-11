@@ -28,7 +28,7 @@
 		$device = $conn->quote($device);
 		$carrier = $conn->quote($carrier);
 
-		$rows = $conn->query("SELECT * FROM devices WHERE device = $device AND carrier = $carrier ORDER BY release_date DESC");
+		$rows = $conn->query("SELECT * FROM updates WHERE device = $device AND carrier = $carrier ORDER BY release_date DESC");
 		
 
 		foreach($rows as $row) {
@@ -41,9 +41,10 @@
 			$baseband = $row["baseband"];
 			$release = $row["release_date"];
 			$carrier_name = $row["carrier"];
+			$notes = $row["notes"];
 		?>
 			<p><?=$carrier_name?>'s <?=$device_name?> (<?=$customer_name?>) was updated to <?= $os . " " . $os_version?>, Sense <?=$sense?>, SW version <?=$sw_version?>, baseband <?=$baseband?> on <?=$release?></p>
-
+			<p>Notes on this update: <?=$notes?></p>
 		<?php
 
 		}
