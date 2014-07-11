@@ -22,6 +22,8 @@
 		$release = $_POST["release"];
 		$carrier = $_POST["carrier"];
 		$notes = $_POST["notes"];
+		
+		$device = strtoupper($device);
 
 		/*$server = "tcp:mxx6aa5ssr.database.windows.net,1433";
 		$user = "my-test-db@mxx6aa5ssr";
