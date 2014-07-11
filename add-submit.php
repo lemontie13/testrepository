@@ -26,7 +26,7 @@
 		$sw_version = $_POST["swversion"];
 		$baseband = $_POST["baseband"];
 		$release = $_POST["release"];
-		$carrier = $_GET["carrier"];
+		$carrier = $_POST["carrier"];
 
 		/*$server = "tcp:mxx6aa5ssr.database.windows.net,1433";
 		$user = "my-test-db@mxx6aa5ssr";
