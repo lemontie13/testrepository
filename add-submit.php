@@ -13,17 +13,13 @@
 ?>
 	<p>In PHP</p>
 <?php
-	$all_set = (isset($_POST["device"]) && isset($_POST["consumername"]) && isset($_POST["os"])
+	if(isset($_POST["device"]) && isset($_POST["consumername"]) && isset($_POST["os"])
 				&& isset($_POST["osversion"]) && isset($_POST["senseversion"])
 				&& isset($_POST["swversion"]) && isset($_POST["baseband"]) 
-				&& isset($_POST["release"]) && isset($_POST["carrier"]));
-	
-	echo "$all_set";
-
-	if($all_set) {
+				&& isset($_POST["release"]) && isset($_POST["carrier"])) {
 
 		$device = $_POST["device"];
-		$customer_name = $_POST["consumername"];
+		$customer_name = $_POST["customername"];
 		$os = $_POST["os"];
 		$os_version = $_POST["osversion"]; 
 		$sense = $_POST["senseversion"];
