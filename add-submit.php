@@ -8,7 +8,11 @@
 	<body>
 		<p>"Added"</p>
 <?php
-
+	
+	$stuff = 0;
+?>
+	<p>In PHP</p>
+<?php
 	$all_set = (isset($_POST["device"]) && isset($_POST["consumername"]) && isset($_POST["os"])
 				&& isset($_POST["osversion"]) && isset($_POST["senseversion"])
 				&& isset($_POST["swversion"]) && isset($_POST["baseband"]) 
