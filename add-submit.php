@@ -6,12 +6,6 @@
 	</head>
 
 	<body>
-		<p>"Added"</p>
-<?php
-	
-	$stuff = 0;
-?>
-	<p>In PHP</p>
 <?php
 	if(isset($_POST["device"]) && isset($_POST["customername"]) && isset($_POST["os"])
 				&& isset($_POST["osversion"]) && isset($_POST["senseversion"])
@@ -57,6 +51,7 @@
 			$release = $row["release_date"];
 			$carrier_name = $row["carrier"];*/
 		?>
+			<p>The following update was added:</p>
 			<p><?=$carrier?>'s <?=$device?> (<?=$customer_name?>) was updated to <?= $os . " " . $os_version?>, Sense <?=$sense?>, SW version <?=$sw_version?>, baseband <?=$baseband?> on <?=$release?></p>
 
 		<?php
