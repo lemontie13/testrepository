@@ -8,6 +8,9 @@
 			.float {
 				float:left;
 			}
+			textarea{
+ 				vertical-align: middle;
+			}
 			</style>
 	</head>
 
@@ -50,15 +53,32 @@
 			</div>
 
 			<div>
-				Release Date (MM/DD/YYYY)
-				<input type="text" name="release"></input>					
+				Release Date
+				<input type="date" name="release"></input>					
 			</div>
 
 			<div>
 				Carrier
-				<input type="text" name="carrier"></input>					
+				<select name="carrier"> 
+					<option value="TMO">TMO</option>
+					<option value="AT&amp;T">AT&amp;T</option>
+					<option value="VZW">VZW</option>
+					<option value="Sprint">Sprint</option>
+					<option value="Bell">Bell</option>
+					<option value="Telus">Telus</option>
+					<option value="Rogers">Rogers</option>
+					<option value="GoPhone">GoPhone</option>
+					<option value="Cricket">Cricket</option>
+					<option value="BrightStar">BrightStar</option>
+					<option value="ACG">ACG</option>
+					<option value="LRA">LRA</option>
+				</select>					
 			</div>
 
+			<div>
+				Notes (bug fixes, etc.)
+				<textarea name="notes"></textarea> 
+			</div>
 			<input type="submit" value="Add Device Update"></input>
 		</form>
 	
