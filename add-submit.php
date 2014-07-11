@@ -9,10 +9,10 @@
 		<p>"Added"</p>
 <?php
 
-	$all_set = isset($_POST["device"]) && isset($_POST["consumername"]) && isset($_POST["os"])
+	$all_set = (isset($_POST["device"]) && isset($_POST["consumername"]) && isset($_POST["os"])
 				&& isset($_POST["osversion"]) && isset($_POST["senseversion"])
 				&& isset($_POST["swversion"]) && isset($_POST["baseband"]) 
-				&& isset($_POST["release"]) && isset($_POST["carrier"]);
+				&& isset($_POST["release"]) && isset($_POST["carrier"]));
 	
 	echo $all_set;
 
@@ -57,7 +57,7 @@
 			$release = $row["release_date"];
 			$carrier_name = $row["carrier"];*/
 		?>
-			<p><?=$carrier_name?>'s <?=$device_name?> (<?=$customer_name?>) was updated to <?= $os . " " . $os_version?>, Sense <?=$sense?>, SW version <?=$sw_version?>, baseband <?=$baseband?> on <?=$release?></p>
+			<p><?=$carrier?>'s <?=$device?> (<?=$customer_name?>) was updated to <?= $os . " " . $os_version?>, Sense <?=$sense?>, SW version <?=$sw_version?>, baseband <?=$baseband?> on <?=$release?></p>
 
 		<?php
 
