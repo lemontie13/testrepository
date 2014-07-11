@@ -25,7 +25,6 @@
     		die(print_r($e));
 		}
 
-		echo "connected\n";
 		$device = $conn->quote($device);
 		$carrier = $conn->quote($carrier);
 
