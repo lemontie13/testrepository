@@ -13,7 +13,7 @@
 ?>
 	<p>In PHP</p>
 <?php
-	if(isset($_POST["device"]) && isset($_POST["consumername"]) && isset($_POST["os"])
+	if(isset($_POST["device"]) && isset($_POST["customername"]) && isset($_POST["os"])
 				&& isset($_POST["osversion"]) && isset($_POST["senseversion"])
 				&& isset($_POST["swversion"]) && isset($_POST["baseband"]) 
 				&& isset($_POST["release"]) && isset($_POST["carrier"])) {
